@@ -109,34 +109,138 @@ $(function(){initNavTree('class_load_balancer.html',''); initResizable(true); })
   <div class="headertitle"><div class="title">LoadBalancer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Load balancer class that manages web servers and distributes requests.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="loadbalancer_8h_source.html">loadbalancer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a13b24283ce66beb42323dfdcfbb9f995" id="r_a13b24283ce66beb42323dfdcfbb9f995"><td class="memItemLeft" align="right" valign="top"><a id="a13b24283ce66beb42323dfdcfbb9f995" name="a13b24283ce66beb42323dfdcfbb9f995"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>LoadBalancer</b> (int server_count, bool process_type, const std::string &amp;log_filename)</td></tr>
+<tr class="memitem:a13b24283ce66beb42323dfdcfbb9f995" id="r_a13b24283ce66beb42323dfdcfbb9f995"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13b24283ce66beb42323dfdcfbb9f995">LoadBalancer</a> (int server_count, bool process_type, const std::string &amp;log_filename)</td></tr>
+<tr class="memdesc:a13b24283ce66beb42323dfdcfbb9f995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new Load Balancer.  <br /></td></tr>
 <tr class="separator:a13b24283ce66beb42323dfdcfbb9f995"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a20f1c1292b0f85bf10bb175848a2ed" id="r_a0a20f1c1292b0f85bf10bb175848a2ed"><td class="memItemLeft" align="right" valign="top"><a id="a0a20f1c1292b0f85bf10bb175848a2ed" name="a0a20f1c1292b0f85bf10bb175848a2ed"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>addRequest</b> (<a class="el" href="class_request.html">Request</a> &amp;req)</td></tr>
+<tr class="memitem:a69951a7bb77be7fafd4d5ad6919abd80" id="r_a69951a7bb77be7fafd4d5ad6919abd80"><td class="memItemLeft" align="right" valign="top"><a id="a69951a7bb77be7fafd4d5ad6919abd80" name="a69951a7bb77be7fafd4d5ad6919abd80"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~LoadBalancer</b> ()</td></tr>
+<tr class="memdesc:a69951a7bb77be7fafd4d5ad6919abd80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor that ensures proper cleanup of resources. <br /></td></tr>
+<tr class="separator:a69951a7bb77be7fafd4d5ad6919abd80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a20f1c1292b0f85bf10bb175848a2ed" id="r_a0a20f1c1292b0f85bf10bb175848a2ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a20f1c1292b0f85bf10bb175848a2ed">addRequest</a> (<a class="el" href="class_request.html">Request</a> &amp;req)</td></tr>
+<tr class="memdesc:a0a20f1c1292b0f85bf10bb175848a2ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new request to the queue.  <br /></td></tr>
 <tr class="separator:a0a20f1c1292b0f85bf10bb175848a2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ab28fe77739767053f27ded4c7e034f" id="r_a9ab28fe77739767053f27ded4c7e034f"><td class="memItemLeft" align="right" valign="top"><a id="a9ab28fe77739767053f27ded4c7e034f" name="a9ab28fe77739767053f27ded4c7e034f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> (int cycles)</td></tr>
+<tr class="memitem:a9ab28fe77739767053f27ded4c7e034f" id="r_a9ab28fe77739767053f27ded4c7e034f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ab28fe77739767053f27ded4c7e034f">run</a> (int cycles)</td></tr>
+<tr class="memdesc:a9ab28fe77739767053f27ded4c7e034f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the load balancer for a specified number of cycles.  <br /></td></tr>
 <tr class="separator:a9ab28fe77739767053f27ded4c7e034f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32f3f33a319622cf83b41cb9fcd09d3c" id="r_a32f3f33a319622cf83b41cb9fcd09d3c"><td class="memItemLeft" align="right" valign="top"><a id="a32f3f33a319622cf83b41cb9fcd09d3c" name="a32f3f33a319622cf83b41cb9fcd09d3c"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addServer</b> ()</td></tr>
+<tr class="memdesc:a32f3f33a319622cf83b41cb9fcd09d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new server to the pool. <br /></td></tr>
 <tr class="separator:a32f3f33a319622cf83b41cb9fcd09d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f77281d168914e6bbe1857a0cd84d25" id="r_a2f77281d168914e6bbe1857a0cd84d25"><td class="memItemLeft" align="right" valign="top"><a id="a2f77281d168914e6bbe1857a0cd84d25" name="a2f77281d168914e6bbe1857a0cd84d25"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>removeServer</b> ()</td></tr>
+<tr class="memdesc:a2f77281d168914e6bbe1857a0cd84d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes an idle server from the pool if conditions allow. <br /></td></tr>
 <tr class="separator:a2f77281d168914e6bbe1857a0cd84d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a64f65307b9957f2fa99bb76d2b92d966" id="r_a64f65307b9957f2fa99bb76d2b92d966"><td class="memItemLeft" align="right" valign="top"><a id="a64f65307b9957f2fa99bb76d2b92d966" name="a64f65307b9957f2fa99bb76d2b92d966"></a>
 vector&lt; <a class="el" href="class_web_server.html">WebServer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>servers</b></td></tr>
+<tr class="memdesc:a64f65307b9957f2fa99bb76d2b92d966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of managed web servers. <br /></td></tr>
 <tr class="separator:a64f65307b9957f2fa99bb76d2b92d966"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee42982dedbdf29fa275ba952f013381" id="r_aee42982dedbdf29fa275ba952f013381"><td class="memItemLeft" align="right" valign="top"><a id="aee42982dedbdf29fa275ba952f013381" name="aee42982dedbdf29fa275ba952f013381"></a>
 queue&lt; <a class="el" href="class_request.html">Request</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>request_queue</b></td></tr>
+<tr class="memdesc:aee42982dedbdf29fa275ba952f013381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue of pending requests. <br /></td></tr>
 <tr class="separator:aee42982dedbdf29fa275ba952f013381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Load balancer class that manages web servers and distributes requests. </p>
+<p>This class handles the distribution of requests to multiple web servers, dynamically scaling the server pool up or down based on demand. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a13b24283ce66beb42323dfdcfbb9f995" name="a13b24283ce66beb42323dfdcfbb9f995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13b24283ce66beb42323dfdcfbb9f995">&#9670;&#160;</a></span>LoadBalancer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LoadBalancer::LoadBalancer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>server_count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>process_type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>log_filename</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a new Load Balancer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">server_count</td><td>Initial number of servers to create </td></tr>
+    <tr><td class="paramname">process_type</td><td>Type of requests to handle (true for process, false for streaming) </td></tr>
+    <tr><td class="paramname">log_filename</td><td>Path to the log file for recording operations </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0a20f1c1292b0f85bf10bb175848a2ed" name="a0a20f1c1292b0f85bf10bb175848a2ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a20f1c1292b0f85bf10bb175848a2ed">&#9670;&#160;</a></span>addRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadBalancer::addRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_request.html">Request</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>req</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new request to the queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>The request to be processed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9ab28fe77739767053f27ded4c7e034f" name="a9ab28fe77739767053f27ded4c7e034f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ab28fe77739767053f27ded4c7e034f">&#9670;&#160;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LoadBalancer::run </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cycles</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Executes the load balancer for a specified number of cycles. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cycles</td><td>Number of simulation cycles to run </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="loadbalancer_8h_source.html">loadbalancer.h</a></li>
 <li><b>loadbalancer.cpp</b></li>

@@ -109,31 +109,133 @@ $(function(){initNavTree('class_web_server.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">WebServer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a web server that can process requests.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="webserver_8h_source.html">webserver.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5044757cd8574d3f62a7eec5d51fb00f" id="r_a5044757cd8574d3f62a7eec5d51fb00f"><td class="memItemLeft" align="right" valign="top"><a id="a5044757cd8574d3f62a7eec5d51fb00f" name="a5044757cd8574d3f62a7eec5d51fb00f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>WebServer</b> (int id)</td></tr>
+<tr class="memitem:a5044757cd8574d3f62a7eec5d51fb00f" id="r_a5044757cd8574d3f62a7eec5d51fb00f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5044757cd8574d3f62a7eec5d51fb00f">WebServer</a> (int id)</td></tr>
+<tr class="memdesc:a5044757cd8574d3f62a7eec5d51fb00f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new web server.  <br /></td></tr>
 <tr class="separator:a5044757cd8574d3f62a7eec5d51fb00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a737ed899617be9f94f756f1015cb5d4f" id="r_a737ed899617be9f94f756f1015cb5d4f"><td class="memItemLeft" align="right" valign="top"><a id="a737ed899617be9f94f756f1015cb5d4f" name="a737ed899617be9f94f756f1015cb5d4f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Available</b> ()</td></tr>
+<tr class="memitem:a737ed899617be9f94f756f1015cb5d4f" id="r_a737ed899617be9f94f756f1015cb5d4f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a737ed899617be9f94f756f1015cb5d4f">Available</a> ()</td></tr>
+<tr class="memdesc:a737ed899617be9f94f756f1015cb5d4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the server can accept new requests.  <br /></td></tr>
 <tr class="separator:a737ed899617be9f94f756f1015cb5d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29582c62e006ede13d00392cf5981f48" id="r_a29582c62e006ede13d00392cf5981f48"><td class="memItemLeft" align="right" valign="top"><a id="a29582c62e006ede13d00392cf5981f48" name="a29582c62e006ede13d00392cf5981f48"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>processRequest</b> (<a class="el" href="class_request.html">Request</a> req)</td></tr>
+<tr class="memitem:a29582c62e006ede13d00392cf5981f48" id="r_a29582c62e006ede13d00392cf5981f48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29582c62e006ede13d00392cf5981f48">processRequest</a> (<a class="el" href="class_request.html">Request</a> req)</td></tr>
+<tr class="memdesc:a29582c62e006ede13d00392cf5981f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a new request to the server.  <br /></td></tr>
 <tr class="separator:a29582c62e006ede13d00392cf5981f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae58d6d30bf4c300788e83c2f36a6a8e1" id="r_ae58d6d30bf4c300788e83c2f36a6a8e1"><td class="memItemLeft" align="right" valign="top"><a id="ae58d6d30bf4c300788e83c2f36a6a8e1" name="ae58d6d30bf4c300788e83c2f36a6a8e1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+<tr class="memitem:ae58d6d30bf4c300788e83c2f36a6a8e1" id="r_ae58d6d30bf4c300788e83c2f36a6a8e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae58d6d30bf4c300788e83c2f36a6a8e1">update</a> ()</td></tr>
+<tr class="memdesc:ae58d6d30bf4c300788e83c2f36a6a8e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the server's state for one time step.  <br /></td></tr>
 <tr class="separator:ae58d6d30bf4c300788e83c2f36a6a8e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a3e535713f32c7b9c5e657d6918e4cca0" id="r_a3e535713f32c7b9c5e657d6918e4cca0"><td class="memItemLeft" align="right" valign="top"><a id="a3e535713f32c7b9c5e657d6918e4cca0" name="a3e535713f32c7b9c5e657d6918e4cca0"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>server_id</b></td></tr>
+<tr class="memdesc:a3e535713f32c7b9c5e657d6918e4cca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unique identifier for this server. <br /></td></tr>
 <tr class="separator:a3e535713f32c7b9c5e657d6918e4cca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf3b3b96e811ea107977ca704675a801" id="r_aaf3b3b96e811ea107977ca704675a801"><td class="memItemLeft" align="right" valign="top"><a id="aaf3b3b96e811ea107977ca704675a801" name="aaf3b3b96e811ea107977ca704675a801"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>time_left</b></td></tr>
+<tr class="memdesc:aaf3b3b96e811ea107977ca704675a801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remaining time for current request processing. <br /></td></tr>
 <tr class="separator:aaf3b3b96e811ea107977ca704675a801"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a web server that can process requests. </p>
+<p>Manages individual server state and request processing capabilities. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5044757cd8574d3f62a7eec5d51fb00f" name="a5044757cd8574d3f62a7eec5d51fb00f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5044757cd8574d3f62a7eec5d51fb00f">&#9670;&#160;</a></span>WebServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WebServer::WebServer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs a new web server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Unique identifier for the server </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a737ed899617be9f94f756f1015cb5d4f" name="a737ed899617be9f94f756f1015cb5d4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a737ed899617be9f94f756f1015cb5d4f">&#9670;&#160;</a></span>Available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WebServer::Available </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the server can accept new requests. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if server is available, false if busy </dd></dl>
+
+</div>
+</div>
+<a id="a29582c62e006ede13d00392cf5981f48" name="a29582c62e006ede13d00392cf5981f48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29582c62e006ede13d00392cf5981f48">&#9670;&#160;</a></span>processRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WebServer::processRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_request.html">Request</a></td>          <td class="paramname"><span class="paramname"><em>req</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Assigns a new request to the server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">req</td><td>The request to be processed </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae58d6d30bf4c300788e83c2f36a6a8e1" name="ae58d6d30bf4c300788e83c2f36a6a8e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae58d6d30bf4c300788e83c2f36a6a8e1">&#9670;&#160;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WebServer::update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the server's state for one time step. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if server completed a request, false otherwise </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="webserver_8h_source.html">webserver.h</a></li>
 <li><b>webserver.cpp</b></li>

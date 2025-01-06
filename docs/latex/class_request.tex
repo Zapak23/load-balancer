@@ -1,26 +1,58 @@
 \doxysection{Request Class Reference}
 \hypertarget{class_request}{}\label{class_request}\index{Request@{Request}}
+
+
+Represents a web request to be processed by the server.  
+
+
+
+
+{\ttfamily \#include $<$request.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_request_ab74baedb5e4e73fe54c97f61e37e8f9a}\label{class_request_ab74baedb5e4e73fe54c97f61e37e8f9a} 
-bool {\bfseries is\+Process\+Request} ()
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{class_request_ab74baedb5e4e73fe54c97f61e37e8f9a}{is\+Process\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Checks if this is a processing request. \end{DoxyCompactList}\item 
+\Hypertarget{class_request_afaf8d8928de7ffff8a3767589489bd33}\label{class_request_afaf8d8928de7ffff8a3767589489bd33} 
+{\bfseries Request} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that creates a random request. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_request_a9928e13d4c7b1b092fdc147752634ac3}\label{class_request_a9928e13d4c7b1b092fdc147752634ac3} 
 string {\bfseries IP\+\_\+in}
-\item 
+\begin{DoxyCompactList}\small\item\em Source IP address. \end{DoxyCompactList}\item 
 \Hypertarget{class_request_ac6252b68f9b53fc09d29db7793fb9609}\label{class_request_ac6252b68f9b53fc09d29db7793fb9609} 
 string {\bfseries IP\+\_\+out}
-\item 
+\begin{DoxyCompactList}\small\item\em Destination IP address. \end{DoxyCompactList}\item 
 \Hypertarget{class_request_af2aad8a6918b4d6fff5479777699ec2e}\label{class_request_af2aad8a6918b4d6fff5479777699ec2e} 
 int {\bfseries length}
-\item 
+\begin{DoxyCompactList}\small\item\em Processing time required. \end{DoxyCompactList}\item 
 \Hypertarget{class_request_ae8cf485c79496e5ef449f254ad63e314}\label{class_request_ae8cf485c79496e5ef449f254ad63e314} 
 bool {\bfseries p\+\_\+process}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_request}{Request} type flag (true for process, false for streaming) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a web request to be processed by the server. 
+
+Contains information about the request including source and destination IPs, processing time, and request type. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_request_ab74baedb5e4e73fe54c97f61e37e8f9a}\index{Request@{Request}!isProcessRequest@{isProcessRequest}}
+\index{isProcessRequest@{isProcessRequest}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{isProcessRequest()}{isProcessRequest()}}
+{\footnotesize\ttfamily \label{class_request_ab74baedb5e4e73fe54c97f61e37e8f9a} 
+bool Request\+::is\+Process\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if this is a processing request. 
+
+\begin{DoxyReturn}{Returns}
+true if processing request, false if streaming 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

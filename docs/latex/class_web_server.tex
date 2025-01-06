@@ -1,29 +1,101 @@
 \doxysection{Web\+Server Class Reference}
 \hypertarget{class_web_server}{}\label{class_web_server}\index{WebServer@{WebServer}}
+
+
+Represents a web server that can process requests.  
+
+
+
+
+{\ttfamily \#include $<$webserver.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_web_server_a5044757cd8574d3f62a7eec5d51fb00f}\label{class_web_server_a5044757cd8574d3f62a7eec5d51fb00f} 
-{\bfseries Web\+Server} (int id)
-\item 
-\Hypertarget{class_web_server_a737ed899617be9f94f756f1015cb5d4f}\label{class_web_server_a737ed899617be9f94f756f1015cb5d4f} 
-bool {\bfseries Available} ()
-\item 
-\Hypertarget{class_web_server_a29582c62e006ede13d00392cf5981f48}\label{class_web_server_a29582c62e006ede13d00392cf5981f48} 
-void {\bfseries process\+Request} (\mbox{\hyperlink{class_request}{Request}} req)
-\item 
-\Hypertarget{class_web_server_ae58d6d30bf4c300788e83c2f36a6a8e1}\label{class_web_server_ae58d6d30bf4c300788e83c2f36a6a8e1} 
-bool {\bfseries update} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_web_server_a5044757cd8574d3f62a7eec5d51fb00f}{Web\+Server}} (int id)
+\begin{DoxyCompactList}\small\item\em Constructs a new web server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_web_server_a737ed899617be9f94f756f1015cb5d4f}{Available}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the server can accept new requests. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_web_server_a29582c62e006ede13d00392cf5981f48}{process\+Request}} (\mbox{\hyperlink{class_request}{Request}} req)
+\begin{DoxyCompactList}\small\item\em Assigns a new request to the server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_web_server_ae58d6d30bf4c300788e83c2f36a6a8e1}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the server\textquotesingle{}s state for one time step. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_web_server_a3e535713f32c7b9c5e657d6918e4cca0}\label{class_web_server_a3e535713f32c7b9c5e657d6918e4cca0} 
 int {\bfseries server\+\_\+id}
-\item 
+\begin{DoxyCompactList}\small\item\em Unique identifier for this server. \end{DoxyCompactList}\item 
 \Hypertarget{class_web_server_aaf3b3b96e811ea107977ca704675a801}\label{class_web_server_aaf3b3b96e811ea107977ca704675a801} 
 int {\bfseries time\+\_\+left}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Remaining time for current request processing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a web server that can process requests. 
+
+Manages individual server state and request processing capabilities. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_web_server_a5044757cd8574d3f62a7eec5d51fb00f}\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\index{WebServer@{WebServer}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{WebServer()}{WebServer()}}
+{\footnotesize\ttfamily \label{class_web_server_a5044757cd8574d3f62a7eec5d51fb00f} 
+Web\+Server\+::\+Web\+Server (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new web server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique identifier for the server \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_web_server_a737ed899617be9f94f756f1015cb5d4f}\index{WebServer@{WebServer}!Available@{Available}}
+\index{Available@{Available}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{Available()}{Available()}}
+{\footnotesize\ttfamily \label{class_web_server_a737ed899617be9f94f756f1015cb5d4f} 
+bool Web\+Server\+::\+Available (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the server can accept new requests. 
+
+\begin{DoxyReturn}{Returns}
+true if server is available, false if busy 
+\end{DoxyReturn}
+\Hypertarget{class_web_server_a29582c62e006ede13d00392cf5981f48}\index{WebServer@{WebServer}!processRequest@{processRequest}}
+\index{processRequest@{processRequest}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{processRequest()}{processRequest()}}
+{\footnotesize\ttfamily \label{class_web_server_a29582c62e006ede13d00392cf5981f48} 
+void Web\+Server\+::process\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_request}{Request}}}]{req}{}\end{DoxyParamCaption})}
+
+
+
+Assigns a new request to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The request to be processed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_web_server_ae58d6d30bf4c300788e83c2f36a6a8e1}\index{WebServer@{WebServer}!update@{update}}
+\index{update@{update}!WebServer@{WebServer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_web_server_ae58d6d30bf4c300788e83c2f36a6a8e1} 
+bool Web\+Server\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Updates the server\textquotesingle{}s state for one time step. 
+
+\begin{DoxyReturn}{Returns}
+true if server completed a request, false otherwise 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -113,28 +113,41 @@ $(function(){initNavTree('loadbalancer_8h_source.html',''); initResizable(true);
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;queue&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_load_balancer.html">   10</a></span><span class="keyword">class </span>LoadBalancer {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    vector&lt;WebServer&gt; servers;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    queue&lt;Request&gt; request_queue;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    LoadBalancer(<span class="keywordtype">int</span> server_count, <span class="keywordtype">bool</span> process_type, <span class="keyword">const</span> std::string&amp; log_filename);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    ~LoadBalancer();</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> addRequest(<a class="code hl_class" href="class_request.html">Request</a>&amp; req);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> run(<span class="keywordtype">int</span> cycles);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> addServer();</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> removeServer();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">bool</span> process_type;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::ofstream log_file;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>};</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_load_balancer.html">   16</a></span><span class="keyword">class </span><a class="code hl_function" href="class_load_balancer.html#a13b24283ce66beb42323dfdcfbb9f995">LoadBalancer</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_load_balancer.html#a64f65307b9957f2fa99bb76d2b92d966">   18</a></span>    vector&lt;WebServer&gt; <a class="code hl_variable" href="class_load_balancer.html#a64f65307b9957f2fa99bb76d2b92d966">servers</a>;     </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_load_balancer.html#aee42982dedbdf29fa275ba952f013381">   19</a></span>    queue&lt;Request&gt; <a class="code hl_variable" href="class_load_balancer.html#aee42982dedbdf29fa275ba952f013381">request_queue</a>;  </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_function" href="class_load_balancer.html#a13b24283ce66beb42323dfdcfbb9f995">LoadBalancer</a>(<span class="keywordtype">int</span> server_count, <span class="keywordtype">bool</span> process_type, <span class="keyword">const</span> std::string&amp; log_filename);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_function" href="class_load_balancer.html#a69951a7bb77be7fafd4d5ad6919abd80">~LoadBalancer</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_load_balancer.html#a0a20f1c1292b0f85bf10bb175848a2ed">addRequest</a>(<a class="code hl_class" href="class_request.html">Request</a>&amp; req);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_load_balancer.html#a9ab28fe77739767053f27ded4c7e034f">run</a>(<span class="keywordtype">int</span> cycles);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_load_balancer.html#a32f3f33a319622cf83b41cb9fcd09d3c">addServer</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_load_balancer.html#a2f77281d168914e6bbe1857a0cd84d25">removeServer</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">bool</span> process_type;         </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    std::ofstream log_file;    </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_request_html"><div class="ttname"><a href="class_request.html">Request</a></div><div class="ttdef"><b>Definition</b> request.h:6</div></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_load_balancer_html_a0a20f1c1292b0f85bf10bb175848a2ed"><div class="ttname"><a href="class_load_balancer.html#a0a20f1c1292b0f85bf10bb175848a2ed">LoadBalancer::addRequest</a></div><div class="ttdeci">void addRequest(Request &amp;req)</div><div class="ttdoc">Adds a new request to the queue.</div><div class="ttdef"><b>Definition</b> loadbalancer.cpp:22</div></div>
+<div class="ttc" id="aclass_load_balancer_html_a13b24283ce66beb42323dfdcfbb9f995"><div class="ttname"><a href="class_load_balancer.html#a13b24283ce66beb42323dfdcfbb9f995">LoadBalancer::LoadBalancer</a></div><div class="ttdeci">LoadBalancer(int server_count, bool process_type, const std::string &amp;log_filename)</div><div class="ttdoc">Constructs a new Load Balancer.</div><div class="ttdef"><b>Definition</b> loadbalancer.cpp:8</div></div>
+<div class="ttc" id="aclass_load_balancer_html_a2f77281d168914e6bbe1857a0cd84d25"><div class="ttname"><a href="class_load_balancer.html#a2f77281d168914e6bbe1857a0cd84d25">LoadBalancer::removeServer</a></div><div class="ttdeci">void removeServer()</div><div class="ttdoc">Removes an idle server from the pool if conditions allow.</div><div class="ttdef"><b>Definition</b> loadbalancer.cpp:96</div></div>
+<div class="ttc" id="aclass_load_balancer_html_a32f3f33a319622cf83b41cb9fcd09d3c"><div class="ttname"><a href="class_load_balancer.html#a32f3f33a319622cf83b41cb9fcd09d3c">LoadBalancer::addServer</a></div><div class="ttdeci">void addServer()</div><div class="ttdoc">Adds a new server to the pool.</div><div class="ttdef"><b>Definition</b> loadbalancer.cpp:91</div></div>
+<div class="ttc" id="aclass_load_balancer_html_a64f65307b9957f2fa99bb76d2b92d966"><div class="ttname"><a href="class_load_balancer.html#a64f65307b9957f2fa99bb76d2b92d966">LoadBalancer::servers</a></div><div class="ttdeci">vector&lt; WebServer &gt; servers</div><div class="ttdoc">Collection of managed web servers.</div><div class="ttdef"><b>Definition</b> loadbalancer.h:18</div></div>
+<div class="ttc" id="aclass_load_balancer_html_a69951a7bb77be7fafd4d5ad6919abd80"><div class="ttname"><a href="class_load_balancer.html#a69951a7bb77be7fafd4d5ad6919abd80">LoadBalancer::~LoadBalancer</a></div><div class="ttdeci">~LoadBalancer()</div><div class="ttdoc">Destructor that ensures proper cleanup of resources.</div><div class="ttdef"><b>Definition</b> loadbalancer.cpp:16</div></div>
+<div class="ttc" id="aclass_load_balancer_html_a9ab28fe77739767053f27ded4c7e034f"><div class="ttname"><a href="class_load_balancer.html#a9ab28fe77739767053f27ded4c7e034f">LoadBalancer::run</a></div><div class="ttdeci">void run(int cycles)</div><div class="ttdoc">Executes the load balancer for a specified number of cycles.</div><div class="ttdef"><b>Definition</b> loadbalancer.cpp:28</div></div>
+<div class="ttc" id="aclass_load_balancer_html_aee42982dedbdf29fa275ba952f013381"><div class="ttname"><a href="class_load_balancer.html#aee42982dedbdf29fa275ba952f013381">LoadBalancer::request_queue</a></div><div class="ttdeci">queue&lt; Request &gt; request_queue</div><div class="ttdoc">Queue of pending requests.</div><div class="ttdef"><b>Definition</b> loadbalancer.h:19</div></div>
+<div class="ttc" id="aclass_request_html"><div class="ttname"><a href="class_request.html">Request</a></div><div class="ttdoc">Represents a web request to be processed by the server.</div><div class="ttdef"><b>Definition</b> request.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
