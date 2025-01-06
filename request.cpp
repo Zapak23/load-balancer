@@ -17,3 +17,7 @@ Request::Request() {
              std::to_string(rand() % 256) + "." + 
              std::to_string(rand() % 256);
 }
+
+bool Request::isProcessRequest() {
+    return p_process;
+}
