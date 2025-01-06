@@ -1,0 +1,35 @@
+\doxysection{Load\+Balancer Class Reference}
+\hypertarget{class_load_balancer}{}\label{class_load_balancer}\index{LoadBalancer@{LoadBalancer}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_load_balancer_a13b24283ce66beb42323dfdcfbb9f995}\label{class_load_balancer_a13b24283ce66beb42323dfdcfbb9f995} 
+{\bfseries Load\+Balancer} (int server\+\_\+count, bool process\+\_\+type, const std\+::string \&log\+\_\+filename)
+\item 
+\Hypertarget{class_load_balancer_a0a20f1c1292b0f85bf10bb175848a2ed}\label{class_load_balancer_a0a20f1c1292b0f85bf10bb175848a2ed} 
+void {\bfseries add\+Request} (\mbox{\hyperlink{class_request}{Request}} \&req)
+\item 
+\Hypertarget{class_load_balancer_a9ab28fe77739767053f27ded4c7e034f}\label{class_load_balancer_a9ab28fe77739767053f27ded4c7e034f} 
+void {\bfseries run} (int cycles)
+\item 
+\Hypertarget{class_load_balancer_a32f3f33a319622cf83b41cb9fcd09d3c}\label{class_load_balancer_a32f3f33a319622cf83b41cb9fcd09d3c} 
+void {\bfseries add\+Server} ()
+\item 
+\Hypertarget{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25}\label{class_load_balancer_a2f77281d168914e6bbe1857a0cd84d25} 
+void {\bfseries remove\+Server} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_load_balancer_a64f65307b9957f2fa99bb76d2b92d966}\label{class_load_balancer_a64f65307b9957f2fa99bb76d2b92d966} 
+vector$<$ \mbox{\hyperlink{class_web_server}{Web\+Server}} $>$ {\bfseries servers}
+\item 
+\Hypertarget{class_load_balancer_aee42982dedbdf29fa275ba952f013381}\label{class_load_balancer_aee42982dedbdf29fa275ba952f013381} 
+queue$<$ \mbox{\hyperlink{class_request}{Request}} $>$ {\bfseries request\+\_\+queue}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+loadbalancer.\+h\item 
+loadbalancer.\+cpp\end{DoxyCompactItemize}
