@@ -44,7 +44,7 @@ void LoadBalancer::run(int cycles) {
                     Request req;
                     addRequest(req);
                 }
-                log_file << "*** Generated " << num_requests << " new requests ***" << "\n";
+                log_file << "*** Generated " << num_requests << " random new requests ***" << "\n";
             }
         }
 
